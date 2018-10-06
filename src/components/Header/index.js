@@ -2,40 +2,33 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography';
 
 import './Header.css';
 
 const Header = () => (
-  <AppBar>
-    <Typography variant="title" color="inherit" className="menu-button">
-      <NavLink
-        activeClassName="nav-link-selected"
-        exact
-        to="/"
-      >
+  <AppBar position="static" className="header-main">
+    <Toolbar>
+      <Typography variant="title" color="inherit" className="menu-button">
+        <NavLink activeClassName="nav-link-selected" exact to="/">
           Home
-      </NavLink>
-    </Typography>
+        </NavLink>
+      </Typography>
 
-    <Typography variant="title" color="inherit" className="menu-button">
-      <NavLink
-        activeClassName="nav-link-selected"
-        to="/about"
-      >
+      <Typography variant="title" color="inherit" className="menu-button">
+        <NavLink activeClassName="nav-link-selected" to="/about">
           About
-      </NavLink>
-    </Typography>
+        </NavLink>
+      </Typography>
 
-    <Typography variant="title" color="inherit" className="menu-button">
-      <NavLink
-        activeClassName="nav-link-selected"
-        to="/pen-pal"
-      >
+      <Typography variant="title" color="inherit" className="menu-button">
+        <NavLink activeClassName="nav-link-selected" to="/pen-pal">
           Pen Pal
-      </NavLink>
-    </Typography>
+        </NavLink>
+      </Typography>
+    </Toolbar>
   </AppBar>
-);
+)
 
 export default Header;

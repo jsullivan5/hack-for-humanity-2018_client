@@ -1,9 +1,14 @@
-.header-main {
+/* .header-main {
   background-color: blue;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+} */
+
+.header-main a {
+  margin: 0 20px;
+  text-decoration: none;
 }
 
 .root {
