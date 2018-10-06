@@ -1,0 +1,20 @@
+.header-main {
+  background-color: blue;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.root {
+  flex-grow: 1;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.menu-button {
+    margin-left: -12;
+    margin-right: 20,;
+}
