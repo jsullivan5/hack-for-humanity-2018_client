@@ -10,13 +10,18 @@ import {
 } from '../../modules/counter';
 
 const Home = props => (
-  <div>
-    <h1>Home</h1>
+  <div className = "hero-pic">
+    <div className="callout">
+      <p className = "center-text">Mentor.</p>
+      <p>Be Mentored.</p>
+      <button className = "button">Tell Us Your Story</button>
+      <button className="button">Hear the Wise</button>
+    </div>
     <p>
-Count:
-{' '}
-{props.count}
-</p>
+      Count:
+      {' '}
+      {props.count}
+    </p>
 
     <p>
       <button onClick={props.increment}>Increment</button>

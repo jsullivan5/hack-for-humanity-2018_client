@@ -1,3 +1,29 @@
+.callout{
+  height:300px;
+  box-shadow: 3px 3px 25px 5px #D3D3D3;
+  background-color: #FFF;
+  font-weight: bold;
+  width:30%;
+  padding: 3vh;
+  margin: 2vh 2vh;
+  align-items: center;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.button{
+  background-color: #FFF;
+  border: 2px solid #8C89E8;
+  height: 5vh;
+  margin: 2vh;
+  transition: all .5s ease;
+}
+
+.button:hover{
+  color: #FFF;
+  background-color: #8C89E8;
+}
+
 .header-main {
   background-color: #FFF;
   height: 8vh;
@@ -11,6 +37,14 @@
 
 .header-main a {
   margin: 0 20px;
+}
+
+.hero-pic{
+  background-attachment: fixed;
+  background-image: url("https://images.pexels.com/photos/351961/pexels-photo-351961.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
 }
 
 .root {
