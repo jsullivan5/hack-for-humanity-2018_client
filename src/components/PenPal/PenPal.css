@@ -1,3 +1,21 @@
+.button-large{
+  background-color:#8C89E8;
+  border: 2px solid #8C89E8;
+  box-shadow: 0px 0px 25px 1px #D3D3D3;
+  font-size: 1.5em;
+  border-radius: 6px;
+  color: #FFF;
+  height: 9vh;
+  margin: 2vh;
+  transition: all .5s ease;
+  margin-top: 2.5em;
+}
+
+.pen-pal .button-large {
+  margin-top: 0;
+  width: 200px;
+}
+
 .start-button.recording-active {
   background-color: initial;
   animation: fade 2s linear;
@@ -8,6 +26,7 @@
 .email-text-area {
   display: block;
   height: 400px;
+  margin-bottom: 2vh;
   width: 100%;
 }
 
