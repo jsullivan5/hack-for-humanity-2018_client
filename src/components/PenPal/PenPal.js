@@ -33,7 +33,8 @@ class PenPal extends Component {
         });
 
         document.querySelector('#stop').onclick = () => { // TODO: Get rid of this vanilla js with refs API
-          this.setState({ isRecording: false });
+          const emailText = document.querySelector('#output').value;
+          this.setState({ isRecording: false, emailBody: emailText });
           stream.stop();
         };
       }).catch((error) => {
@@ -75,11 +76,11 @@ class PenPal extends Component {
     const { emailBody, isRecording } = this.state;
 
     return (
-      <div className="content-wrapper">
-        <button type="button" className={`start-button ${isRecording ? 'recording-active' : ''}`} onClick={this.startStream}>
+      <div className="content-wrapper pen-pal">
+        <button type="button" className={`start-button button-large ${isRecording ? 'recording-active' : ''}`} onClick={this.startStream}>
           Start
         </button>
-        <button id="stop" type="button">
+        <button id="stop" className="button-large" type="button">
           Stop
         </button>
         <textarea
@@ -89,7 +90,7 @@ class PenPal extends Component {
           value={emailBody}
           onChange={this.handleChange}
         />
-        <input type="submit" onClick={this.sendEmail} />
+        <input type="submit" onClick={this.sendEmail} className="button-large" />
       </div>
     );
   }
