@@ -44,7 +44,7 @@ class PenPal extends Component {
   sendEmail = () => {
     // TODO: Get rid of this vanilla js with refs API
     const value = document.querySelector('#output').value || '';
-    
+
     if (value === '') return;
 
     fetch(
@@ -59,7 +59,10 @@ class PenPal extends Component {
         }),
       },
     )
-      .then(res => console.log(`Status: ${res.status}`))
+      .then((res) => {
+        console.log(`Status: ${res.status}`);
+        this.setState({ emailBody: '' });
+      })
       .catch(error => console.error(error));
   }
 
