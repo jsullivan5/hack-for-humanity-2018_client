@@ -1,5 +1,6 @@
 import React from 'react';
 import photo from '../../assets/volunteer.jpg';
+import photo2 from '../../assets/donate.jpg';
 
 const Home = () => (
   <div id="wrapper">
@@ -11,23 +12,12 @@ const Home = () => (
         <button className="button" type="button">Hear the Wise</button>
       </div>
     </div>
-<<<<<<< HEAD
-=======
     <div className ="div-color">
       <h1 className = "center-main-text">MENTORING</h1>
-      <video class = "video" width="320" height="240" controls>
+      <video className = "video" width="320" height="240" controls>
       <source src="../../assets/interview-1.MOV" type="video/MOV"></source>
     </video><br></br>
     <button className="button-large" type="button">Learn More About Mentoring</button>
-    </div>
->>>>>>> Another commit...
-    <div className="div">
-      <h1 className="center-main-text">MENTORING</h1>
-      <video className="video" width="320" height="240" controls>
-        <source src="assets/dungeon-overview.mp4" type="video/mp4" />
-      </video>
-      <br />
-      <button className="button-large" type="button">Learn More About Mentoring</button>
     </div>
     <div className="div">
       <div className="half-div">
@@ -40,7 +30,14 @@ const Home = () => (
       <button className="button-large" type="button">Learn More About the Possibilities of Mentoring</button>
     </div>
     <div className ="div-color">
-
+    <div className="half-div">
+      <h2 className="center-text">Donate</h2>
+      <p className="center-text">We aspire to bring together these different generations in a one on one digital environment, fostering mutually beneficial dialogues, where questions on specific topics are answered and personal connections are enhanced. </p>
+    </div>
+    <div className="half-div">
+      <img className="photo" src={photo2} alt="Volunteer Today" />
+    </div>
+    <button className="button-large" type="button">Learn More About the Possibilities of Mentoring</button>
     </div>
   </div>
 );
