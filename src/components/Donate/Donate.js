@@ -1,5 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-const Donate = () => <section>Donate stuff here....</section>
+const Donate = () => (
+  <div>
+    <section>Donate stuff here....</section>
+    <div />
+  </div>
+);
 
-export default Donate
+export default Donate;
