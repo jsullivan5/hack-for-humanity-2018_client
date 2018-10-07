@@ -22,6 +22,6 @@ const About = () => (
       value.
     </p>
   </div>
-)
+);
 
 export default About;
