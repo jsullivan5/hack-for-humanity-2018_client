@@ -1,0 +1,17 @@
+.start-button.recording-active {
+  background-color: initial;
+  animation: fade 2s linear;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+}
+
+.email-text-area {
+  display: block;
+  height: 400px;
+  width: 100%;
+}
+
+@keyframes fade {
+  0%,100% { background-color: initial; }
+  50% { background-color: #83BC4C; }
+}

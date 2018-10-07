@@ -23,6 +23,13 @@ body {
   color: #484BBA;
 }
 
+.content-wrapper {
+  margin: 0 auto;
+  padding: 40px 50px;
+  max-width: 1000px;
+  width: 100%;
+}
+
 /* anchor tag globals */
 a {
   color: #484BBA;
