@@ -13,6 +13,20 @@
           ".jsx"
         ]
       }
-    ]
+    ],
+   "jsx-a11y/media-has-caption": [
+    1,
+    {
+      "audio": [
+        "Audio"
+      ],
+      "video": [
+        "Video"
+      ],
+      "track": [
+        "Track"
+      ],
+    }
+  ],
   }
 }
