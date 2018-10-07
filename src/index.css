@@ -11,8 +11,30 @@ body {
   line-height: 1.5;
 }
 
+/* global color  vars */
+.accent-teal {
+  color: #89B4E0;
+}
+.accent-lighter {
+  color: #8B8BE2;
+}
+.main-color {
+  color: #484BBA;
+}
+
+/* anchor tag globals */
+a {
+  color: #484BBA;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #8B8BE2;
+}
+
+
 .nav-link-selected {
-  color: #FFF;
+  color: #89B4E0;
 }
 
 button:disabled {
