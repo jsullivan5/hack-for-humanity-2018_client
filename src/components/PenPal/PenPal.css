@@ -7,6 +7,7 @@
 
 .email-text-area {
   display: block;
+  height: 400px;
   width: 100%;
 }
 
