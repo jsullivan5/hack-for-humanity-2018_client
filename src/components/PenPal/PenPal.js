@@ -47,8 +47,6 @@ class PenPal extends Component {
 
   render() {
     const { emailBody } = this.state;
-    console.log(this.textArea.current);
-    console.log(this.stream);
 
     return <div>
         <button onClick={this.startStream}>Start</button>
