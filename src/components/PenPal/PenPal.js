@@ -35,6 +35,27 @@ class PenPal extends Component {
       });
   }
 
+  sendEmail = () => {
+    const { emailBody } = this.state;
+
+    if (emailBody === '') return;
+
+    fetch(
+      'http://localhost:5000/email', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          message: emailBody,
+        }),
+      },
+    )
+      .then(res => console.log(`Status: ${res.status}`))
+      .catch(error => console.error(error));
+  }
+
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
@@ -52,6 +73,7 @@ class PenPal extends Component {
           Stop
         </button>
         <textarea id="output" name="emailBody" value={emailBody} onChange={this.handleChange} style={{ display: 'block' }} />
+        <input type="submit" onClick={this.sendEmail} />
       </div>
     );
   }
