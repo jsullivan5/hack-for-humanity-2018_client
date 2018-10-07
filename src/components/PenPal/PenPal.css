@@ -1,0 +1,20 @@
+/* .start-button {
+  background-color: initial;
+  transition: background-color 1s linear;
+}
+
+.start-button {
+  background-color: green;
+} */
+
+.start-button.recording-active {
+    background-color: initial;
+    animation: fade 2s linear;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+}
+
+@keyframes fade {
+  0%,100% { background-color: initial; }
+  50% { background-color: #83BC4C; }
+}

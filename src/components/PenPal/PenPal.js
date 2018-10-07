@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './PenPal.css';
+
 const recognizeMic = require(
   'watson-speech/speech-to-text/recognize-microphone',
 );
@@ -10,11 +12,14 @@ class PenPal extends Component {
     this.textArea = React.createRef();
     this.state = {
       emailBody: '',
+      isRecording: false,
     };
   }
 
 
   startStream = () => {
+    this.setState({ isRecording: true });
+
     fetch('http://localhost:5000/auth')
       .then(response => response.text())
       .then((token) => {
@@ -28,6 +33,7 @@ class PenPal extends Component {
         });
 
         document.querySelector('#stop').onclick = () => { // TODO: Get rid of this vanilla js with refs API
+          this.setState({ isRecording: false });
           stream.stop();
         };
       }).catch((error) => {
@@ -63,11 +69,11 @@ class PenPal extends Component {
   }
 
   render() {
-    const { emailBody } = this.state;
+    const { emailBody, isRecording } = this.state;
 
     return (
       <div>
-        <button type="button" onClick={this.startStream}>
+        <button type="button" className={`start-button ${isRecording ? 'recording-active' : ''}`} onClick={this.startStream}>
           Start
         </button>
         <button id="stop" type="button">
