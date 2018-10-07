@@ -9,7 +9,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "pretty-quick --staged",
-    "lint": "eslint src/**/**.js --fix"
+    "lint": "eslint src/**/**.js"
   },
   "devDependencies": {
     "eslint": "5.6.0",
