@@ -2,38 +2,42 @@ import React, { Component } from 'react';
 var recognizeMic = require('watson-speech/speech-to-text/recognize-microphone');
 
 class PenPal extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.textArea = React.createRef();
     this.state = {
       emailBody: ''
     };
-
-    this.textArea = React.createRef();
   }
 
 
-  connectTranscribe = () => {
+  startStream = () => {
     fetch('http://localhost:5000/auth')
       .then(function (response) {
         return response.text();
-      }).then(function (token) {
+      }).then(async function (token) {
         console.log('is this stuff working???????', token);
-        var stream = recognizeMic({
+        const stream = await recognizeMic({
           token: token,
-          outputElement: `#output` // CSS selector or DOM Element
+          outputElement: '#output',
         });
 
         stream.on('error', function (err) {
           console.log(err);
         });
 
-        // document.querySelector('#stop').onclick = function () {
-        //   stream.stop();
-        // };
+        document.querySelector('#stop').onclick = function () {
+          console.log('stop');
+          stream.stop();
+        };
 
       }).catch(function (error) {
         console.log(error);
       });
+  }
+
+  endStream = stream => {
+    stream.stop();
   }
 
   handleChange = event => {
@@ -43,16 +47,16 @@ class PenPal extends Component {
 
   render() {
     const { emailBody } = this.state;
-    console.log(this.textArea);
+    console.log(this.textArea.current);
     console.log(this.stream);
 
-    return (
-      <div>
-        <button onClick={this.connectTranscribe}>Start</button>
-        <button onClick={this.connectTranscribe}>Stop</button>
-        <textarea id="output" style={{ display: 'block' }}onChange={this.handleChange} value={emailBody} ref={this.textArea} />
+    return <div>
+        <button onClick={this.startStream}>Start</button>
+        <button id="stop" ref={this.textArea}>
+          Stop
+        </button>
+        <textarea id="output" style={{ display: 'block' }} onChange={this.handleChange} value={emailBody} />
       </div>
-    );
   }
 }
 
