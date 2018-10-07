@@ -1,12 +1,3 @@
-/* .start-button {
-  background-color: initial;
-  transition: background-color 1s linear;
-}
-
-.start-button {
-  background-color: green;
-} */
-
 .start-button.recording-active {
     background-color: initial;
     animation: fade 2s linear;
