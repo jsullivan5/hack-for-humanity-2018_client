@@ -27,7 +27,7 @@ class PenPal extends Component {
           console.log(err);
         });
 
-        document.querySelector('#stop').onclick = () => {
+        document.querySelector('#stop').onclick = () => { // TODO: Get rid of this vanilla js with refs API
           stream.stop();
         };
       }).catch((error) => {
@@ -36,9 +36,10 @@ class PenPal extends Component {
   }
 
   sendEmail = () => {
-    const { emailBody } = this.state;
-
-    if (emailBody === '') return;
+    // TODO: Get rid of this vanilla js with refs API
+    const value = document.querySelector('#output').value || '';
+    
+    if (value === '') return;
 
     fetch(
       'http://localhost:5000/email', {
@@ -48,7 +49,7 @@ class PenPal extends Component {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          message: emailBody,
+          message: value,
         }),
       },
     )
