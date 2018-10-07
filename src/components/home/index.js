@@ -1,18 +1,27 @@
-import React from 'react'
-import { push } from 'connected-react-router'
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
+import React from 'react';
+import { push } from 'connected-react-router';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import {
   increment,
   incrementAsync,
   decrement,
-  decrementAsync
-} from '../../modules/counter'
+  decrementAsync,
+} from '../../modules/counter';
 
 const Home = props => (
-  <div>
-    <h1>Home</h1>
-    <p>Count: {props.count}</p>
+  <div className = "hero-pic">
+    <div className="callout">
+      <p className = "center-text">Mentor.</p>
+      <p>Be Mentored.</p>
+      <button className = "button">Tell Us Your Story</button>
+      <button className="button">Hear the Wise</button>
+    </div>
+    <p>
+      Count:
+      {' '}
+      {props.count}
+    </p>
 
     <p>
       <button onClick={props.increment}>Increment</button>
@@ -34,27 +43,26 @@ const Home = props => (
       </button>
     </p>
   </div>
-)
+);
 
 const mapStateToProps = ({ counter }) => ({
   count: counter.count,
   isIncrementing: counter.isIncrementing,
-  isDecrementing: counter.isDecrementing
-})
+  isDecrementing: counter.isDecrementing,
+});
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
+const mapDispatchToProps = dispatch => bindActionCreators(
     {
       increment,
       incrementAsync,
       decrement,
       decrementAsync,
-      changePage: () => push('/about-us')
+      changePage: () => push('/about-us'),
     },
-    dispatch
-  )
+    dispatch,
+  );
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
-)(Home)
+  mapDispatchToProps,
+)(Home);
