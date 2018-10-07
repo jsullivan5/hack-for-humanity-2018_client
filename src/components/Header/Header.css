@@ -12,6 +12,21 @@
   text-align: center;
 }
 
+.callout-2{
+  height:150px;
+  box-shadow: 3px 3px 25px 5px #D3D3D3;
+  background-color: #FFF;
+  font-weight: bold;
+  width:30%;
+  opacity: .9;
+  padding: 3vh;
+  margin: 20vh;
+  float:right;
+  align-items: center;
+  border-radius: 6px;
+  text-align: center;
+}
+
 .center-text{
   font-size: 2em;
 }
@@ -43,7 +58,7 @@
   height: 9vh;
   margin: 2vh;
   transition: all .5s ease;
-  margin-top: 2.5em;
+  margin-bottom: 5em;
 }
 
 .button:hover{
@@ -59,7 +74,20 @@
 .div{
   height: 110vh;
   background-color:  #FFF;
+  padding: .5em;
+  text-align: center;
+  display: block;
+  box-shadow:-20px 0px 25px #404040;
+}
 
+.div-color{
+  height: 110vh;
+  background-color:  #FAFAFA;
+  z-index:-1;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  background-attachment: fixed;
   padding: .5em;
   text-align: center;
   display: block;
@@ -102,6 +130,16 @@
   position: relative;
 }
 
+.opacity-layer{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: #FAFAFA;
+    opacity: .5;
+    top:0;
+    left: 0;
+}
+
 .photo{
   height: 80vh;
   width: 100vh;
@@ -126,6 +164,7 @@
   height: 60vh;
   width:100vh;
   box-shadow: 2px 1px 10px 3px #333;
+  margin-bottom: 2em;
 }
 
 /* .dropbtn {

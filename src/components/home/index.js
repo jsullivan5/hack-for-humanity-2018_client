@@ -11,6 +11,16 @@ const Home = () => (
         <button className="button" type="button">Hear the Wise</button>
       </div>
     </div>
+<<<<<<< HEAD
+=======
+    <div className ="div-color">
+      <h1 className = "center-main-text">MENTORING</h1>
+      <video class = "video" width="320" height="240" controls>
+      <source src="../../assets/interview-1.MOV" type="video/MOV"></source>
+    </video><br></br>
+    <button className="button-large" type="button">Learn More About Mentoring</button>
+    </div>
+>>>>>>> Another commit...
     <div className="div">
       <h1 className="center-main-text">MENTORING</h1>
       <video className="video" width="320" height="240" controls>
@@ -28,6 +38,9 @@ const Home = () => (
         <p className="center-text">There are many ways you can contribute with this community’s ongoing success. Spread the word! Do you know somebody who is looking for advice or interested in mentoring? We can expand this kind and helpful community through people like you. Sign up to mentor or even help maintain this website. The possibilities are endless!</p>
       </div>
       <button className="button-large" type="button">Learn More About the Possibilities of Mentoring</button>
+    </div>
+    <div className ="div-color">
+
     </div>
   </div>
 );
