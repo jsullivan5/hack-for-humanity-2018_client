@@ -27,6 +27,7 @@ body {
   margin: 0 auto;
   padding: 40px 50px;
   max-width: 1000px;
+  width: 100%;
 }
 
 /* anchor tag globals */

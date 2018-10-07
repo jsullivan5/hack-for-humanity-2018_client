@@ -75,14 +75,20 @@ class PenPal extends Component {
     const { emailBody, isRecording } = this.state;
 
     return (
-      <div>
+      <div className="content-wrapper">
         <button type="button" className={`start-button ${isRecording ? 'recording-active' : ''}`} onClick={this.startStream}>
           Start
         </button>
         <button id="stop" type="button">
           Stop
         </button>
-        <textarea id="output" name="emailBody" value={emailBody} onChange={this.handleChange} style={{ display: 'block' }} />
+        <textarea
+          id="output"
+          className="email-text-area"
+          name="emailBody"
+          value={emailBody}
+          onChange={this.handleChange}
+        />
         <input type="submit" onClick={this.sendEmail} />
       </div>
     );

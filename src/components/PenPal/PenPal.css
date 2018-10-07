@@ -1,8 +1,13 @@
 .start-button.recording-active {
-    background-color: initial;
-    animation: fade 2s linear;
-    animation-iteration-count: infinite;
-    animation-direction: forward;
+  background-color: initial;
+  animation: fade 2s linear;
+  animation-iteration-count: infinite;
+  animation-direction: forward;
+}
+
+.email-text-area {
+  display: block;
+  width: 100%;
 }
 
 @keyframes fade {
