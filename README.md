@@ -86,7 +86,7 @@ git branch my-branch
 git push origin my-branch
 ```
 
-- Pull requests can and should be reviewed by another developer before merging
+- Pull requests can and should be reviewed by another developer before merging.  Tag someone in the `reviewers` section on the right.
 
 ## Running the tests
 
