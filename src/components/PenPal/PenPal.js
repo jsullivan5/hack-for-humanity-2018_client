@@ -7,15 +7,10 @@ const recognizeMic = require(
 );
 
 class PenPal extends Component {
-  constructor(props) {
-    super(props);
-    this.textArea = React.createRef();
-    this.state = {
-      emailBody: '',
-      isRecording: false,
-    };
-  }
-
+  state = {
+    emailBody: '',
+    isRecording: false,
+  };
 
   startStream = () => {
     this.setState({ isRecording: true });
