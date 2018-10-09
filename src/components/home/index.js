@@ -28,8 +28,8 @@ const Home = () => (
         allowFullScreen
       />
       <br />
-      <button className="button-large" type="button">
-        Learn More About Mentoring
+      <button style={{ width: '300px '}} className="button-large" type="button">
+        Become a Mentor
       </button>
     </div>
     <div className="div section-container">
@@ -46,7 +46,7 @@ const Home = () => (
           maintain this website. The possibilities are endless!
         </p>
         <button className="button-large" type="button">
-          Learn More About the Possibilities of Mentoring
+          Get Involved
         </button>
       </div>
     </div>
@@ -60,7 +60,7 @@ const Home = () => (
           connections are enhanced.{' '}
         </p>
         <button className="button-large" type="button">
-          Learn More About the Possibilities of Mentoring
+          Become a Contributor
         </button>
       </div>
       <div className="half-div">
